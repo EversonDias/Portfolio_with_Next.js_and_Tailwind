@@ -4,5 +4,6 @@ export default {
     background: '#CCCCCC',
     emphasis: '#FD151B',
     font: '#000000',
+    select: '#284A58',
   },
 };
