@@ -42,11 +42,9 @@ export default class App extends Component {
   }
 
   getThemeSystemOrStorage() {
-    console.log(localStorage.getItem('theme'));
     if (localStorage.getItem('theme')) {
       const setTheme = localStorage.getItem('theme');
       const theme = JSON.parse(setTheme);
-      console.log(theme);
       this.setTheme(theme.type);
     } else {
       const theme = window.matchMedia('(prefers-color-scheme: dark)');
