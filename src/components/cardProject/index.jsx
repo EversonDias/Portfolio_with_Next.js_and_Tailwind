@@ -1,15 +1,16 @@
 /* eslint-disable require-jsdoc */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Container from './cardProject';
 
 export default class CardProject extends Component {
   render() {
     const {name, language} = this.props;
     return (
-      <div>
+      <Container>
         <p>{name}</p>
         <p>{language}</p>
-      </div>
+      </Container>
     );
   }
 }

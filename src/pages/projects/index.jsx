@@ -1,6 +1,7 @@
 /* eslint-disable require-jsdoc */
 import React, {Component} from 'react';
 import CardProject from '../../components/cardProject';
+import Container from './projects';
 
 export default class Projects extends Component {
   constructor() {
@@ -25,16 +26,17 @@ export default class Projects extends Component {
 
   render() {
     const {projects} = this.state;
-    console.log(projects);
     return (
       <div>
-        {projects.map(({name, language, id, fork}) => (
-          fork || id == '516911726' ? '' :<CardProject
-            key={id}
-            name={name}
-            language={language}
-          />
-        ))}
+        <Container>
+          {projects.map(({name, language, id, fork}) => (
+            fork || id == '516911726' ? '' :<CardProject
+              key={id}
+              name={name}
+              language={language}
+            />
+          ))}
+        </Container>
       </div>
     );
   }

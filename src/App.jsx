@@ -17,29 +17,53 @@ export default class App extends Component {
       },
     };
 
-    this.getThemeSystem = this.getThemeSystem.bind(this);
+    this.getThemeSystemOrStorage = this.getThemeSystemOrStorage.bind(this);
+    this.toggleTheme = this.toggleTheme.bind(this);
+    this.setTheme = this.setTheme.bind(this);
   };
 
   componentDidMount() {
-    this.getThemeSystem();
+    this.getThemeSystemOrStorage();
   }
 
-  getThemeSystem() {
-    const theme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (theme.matches) {
-      this.setState({
-        theme: {
-          type: 'dark',
-        },
-      });
+  saveThemeLocalStorage(theme) {
+    localStorage.setItem('theme', JSON.stringify(theme));
+  }
+
+  setTheme(type) {
+    this.setState({
+      theme: {
+        type,
+      },
+    }, () => {
+      const {theme} = this.state;
+      this.saveThemeLocalStorage(theme);
+    });
+  }
+
+  getThemeSystemOrStorage() {
+    if (localStorage.getItem('theme')) {
+      const setTheme = localStorage.getItem('theme');
+      const theme = JSON.parse(setTheme);
+      this.setTheme(theme.type);
     } else {
-      this.setState({
-        theme: {
-          type: 'light',
-        },
-      });
+      const theme = window.matchMedia('(prefers-color-scheme: dark)');
+      if (theme.matches) {
+        this.setTheme('dark');
+      } else {
+        this.setTheme('light');
+      }
     }
   }
+
+  toggleTheme(e) {
+    if (e) {
+      this.setTheme('dark');
+    } else {
+      this.setTheme('light');
+    }
+  }
+
 
   render() {
     const {theme} = this.state;
@@ -48,7 +72,10 @@ export default class App extends Component {
       <ThemeProvider theme={setTheme ? dark : light}>
         <Container>
           <Global />
-          <Header />
+          <Header
+            type={theme.type}
+            toggleTheme={this.toggleTheme}
+          />
           <MyRoutes />
         </Container>
       </ThemeProvider>
