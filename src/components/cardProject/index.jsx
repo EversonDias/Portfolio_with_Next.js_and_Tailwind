@@ -5,11 +5,11 @@ import Container from './cardProject';
 
 export default class CardProject extends Component {
   render() {
-    const {name, language} = this.props;
+    const {name} = this.props;
     return (
       <Container>
-        <p>{name}</p>
-        <p>{language}</p>
+        <img className="imgCard" src={`https://raw.githubusercontent.com/EversonDias/${name}/main/readme/cardProject/main.png`} alt={name} />
+        <p className="title">{name}</p>
       </Container>
     );
   }
