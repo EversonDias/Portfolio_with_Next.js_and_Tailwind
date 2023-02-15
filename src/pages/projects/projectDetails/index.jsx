@@ -1,12 +1,11 @@
-/* eslint-disable require-jsdoc */
 import React, {Component} from 'react';
 
 export default class ProjectDetails extends Component {
-  render() {
-    return (
-      <div>
+	render() {
+		return (
+			<div>
         ProjectDetails
-      </div>
-    );
-  }
+			</div>
+		);
+	}
 }
