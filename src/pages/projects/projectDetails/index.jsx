@@ -1,11 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export default class ProjectDetails extends Component {
-	render() {
-		return (
-			<div>
+export default function ProjectDetails() {
+	return (
+		<div>
         ProjectDetails
-			</div>
-		);
-	}
+		</div>
+	);
 }

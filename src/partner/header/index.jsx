@@ -1,25 +1,22 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Container from './styles';
 import Logo from '../../components/Logo';
 import NavBar from '../../components/NavBar';
 import PropTypes from 'prop-types';
 
-export default class Header extends Component {
-	render() {
-		const {toggleTheme, type} = this.props;
-		return (
-			<Container>
-				<Logo/>
-				<NavBar
-					type={type}
-					toggleTheme={toggleTheme}
-				/>
-			</Container>
-		);
-	}
+export default function Header({toggleTheme, type}) {
+	return (
+		<Container>
+			<Logo/>
+			<NavBar
+				type={type}
+				toggleTheme={toggleTheme}
+			/>
+		</Container>
+	);
 }
 
 Header.propTypes = {
 	toggleTheme: PropTypes.func.isRequired,
-	type: PropTypes.string.isRequired,
+	type: PropTypes.bool.isRequired,
 };
