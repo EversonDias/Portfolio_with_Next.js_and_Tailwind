@@ -6,6 +6,7 @@ import Header from './partner/header';
 import MyRoutes from './routes';
 import dark from './style/theme/dark';
 import light from './style/theme/light';
+import ThemeContext from './context/theme/Context';
 
 export default function App() {
 	const [theme, setTheme] = useState(localStorage.getItem('theme') === 'true' || false);
@@ -14,25 +15,19 @@ export default function App() {
 	};
 
 	const toggleTheme = () => {
-		if (theme) {
-			setTheme(!theme);
-			saveThemeLocalStorage(!theme);
-		} else {
-			setTheme(!theme);
-			saveThemeLocalStorage(!theme);
-		}
+		setTheme(!theme);
+		saveThemeLocalStorage(!theme);
 	};
 
 	return (
 		<ThemeProvider theme={theme ? dark : light}>
-			<Global />
-			<Container>
-				<Header
-					type={Boolean(theme)}
-					toggleTheme={toggleTheme}
-				/>
-				<MyRoutes />
-			</Container>
+			<ThemeContext.Provider value={{type: Boolean(theme), toggleTheme}} >
+				<Global />
+				<Container>
+					<Header/>
+					<MyRoutes />
+				</Container>
+			</ThemeContext.Provider>
 		</ThemeProvider>
 	);
 }
