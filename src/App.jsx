@@ -23,7 +23,7 @@ export default function App() {
 		<ThemeProvider theme={theme ? dark : light}>
 			<ThemeContext.Provider value={{type: Boolean(theme), toggleTheme}} >
 				<Global />
-				<Container>
+				<Container data-testid='main-home'>
 					<Header/>
 					<MyRoutes />
 				</Container>

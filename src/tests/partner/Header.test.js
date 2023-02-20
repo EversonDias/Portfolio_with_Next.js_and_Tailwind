@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import {screen} from '@testing-library/react';
-import renderWithRouter from '../../renderWithRouter';
+import renderWithRouter from '../utils/renderWithRouter';
 import userEvent from '@testing-library/user-event';
 import App from '../../App';
 

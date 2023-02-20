@@ -12,6 +12,7 @@ export default function NavBar() {
 			<Link to='/projects'>Projetos</Link>
 			<Link to='/about'>Sobre</Link>
 			<Switch
+				data-testid='toggle-theme'
 				onChange={theme.toggleTheme}
 				checked={theme.type}
 				checkedIcon
