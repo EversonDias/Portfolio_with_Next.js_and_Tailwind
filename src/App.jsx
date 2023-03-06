@@ -1,4 +1,7 @@
-import React, {useState} from 'react';
+import React, {
+	useState,
+	useMemo,
+} from 'react';
 import {ThemeProvider} from 'styled-components';
 import Container from './style/app';
 import Global from './style/global';
@@ -9,9 +12,9 @@ import light from './style/theme/light';
 import ThemeContext from './context/theme/Context';
 
 export default function App() {
-	const [theme, setTheme] = useState(localStorage.getItem('theme') === 'true' || false);
+	const [theme, setTheme] = useState(localStorage.getItem('dark') === 'true' || false);
 	const saveThemeLocalStorage = theme => {
-		localStorage.setItem('theme', JSON.stringify(theme));
+		localStorage.setItem('dark', JSON.stringify(theme));
 	};
 
 	const toggleTheme = () => {
@@ -19,15 +22,20 @@ export default function App() {
 		saveThemeLocalStorage(!theme);
 	};
 
+	const type = Boolean(theme);
+	const value = useMemo(() => ({
+		toggleTheme,
+		type,
+	}), [toggleTheme, type]);
 	return (
-		<ThemeProvider theme={theme ? dark : light}>
-			<ThemeContext.Provider value={{type: Boolean(theme), toggleTheme}} >
+		<ThemeContext.Provider value={ value }>
+			<ThemeProvider theme={type ? dark : light}>
 				<Global />
 				<Container data-testid='main-home'>
 					<Header/>
 					<MyRoutes />
 				</Container>
-			</ThemeContext.Provider>
-		</ThemeProvider>
+			</ThemeProvider>
+		</ThemeContext.Provider>
 	);
 }

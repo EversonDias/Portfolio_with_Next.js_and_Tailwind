@@ -6,15 +6,15 @@ import dark from '../../style/theme/dark';
 import light from '../../style/theme/light';
 
 export default function NavBar() {
-	const theme = useContext(ThemeContext);
+	const {type, toggleTheme} = useContext(ThemeContext);
 	return (
 		<nav>
 			<Link to='/projects'>Projetos</Link>
 			<Link to='/about'>Sobre</Link>
 			<Switch
 				data-testid='toggle-theme'
-				onChange={theme.toggleTheme}
-				checked={theme.type}
+				onChange={toggleTheme}
+				checked={type}
 				checkedIcon
 				uncheckedIcon
 				height={10}
