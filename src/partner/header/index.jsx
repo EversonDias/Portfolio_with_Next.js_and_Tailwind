@@ -7,7 +7,9 @@ import PropTypes from 'prop-types';
 export default function Header({toggleTheme, type}) {
 	return (
 		<Container>
-			<Logo/>
+			<div className='logo'>
+				<Logo type={type}/>
+			</div>
 			<NavBar
 				type={type}
 				toggleTheme={toggleTheme}

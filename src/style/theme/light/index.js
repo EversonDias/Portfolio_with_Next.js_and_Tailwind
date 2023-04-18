@@ -1,9 +1,9 @@
 export default {
 	color: {
-		header: '#437F97',
-		background: '#CCCCCC',
-		emphasis: '#FD151B',
-		font: '#000000',
-		select: '#284A58',
+		header: '#1D2D44',
+		background: '#748CAB',
+		highlights: '#9999A1',
+		font: '#ffffff',
+		select: '#748CAB',
 	},
 };

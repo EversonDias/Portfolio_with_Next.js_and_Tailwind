@@ -8,8 +8,8 @@ import light from '../../style/theme/light';
 export default function NavBar({toggleTheme, type}) {
 	return (
 		<nav>
-			<Link to='/projects'>Projetos</Link>
-			<Link to='/about'>Sobre</Link>
+			<Link to='/projects' className='LinksHeader'>Projetos</Link>
+			<Link to='/about' className='LinksHeader'>Sobre</Link>
 			<Switch
 				onChange={toggleTheme}
 				checked={type}
@@ -18,8 +18,8 @@ export default function NavBar({toggleTheme, type}) {
 				height={10}
 				width={40}
 				handleDiameter={20}
-				offColor={dark.color.emphasis}
-				onColor={light.color.emphasis}
+				onColor={dark.color.highlights}
+				offColor={light.color.highlights}
 			/>
 		</nav>
 	);
