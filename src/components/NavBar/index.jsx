@@ -9,8 +9,8 @@ export default function NavBar() {
 	const {type, toggleTheme} = useContext(ThemeContext);
 	return (
 		<nav>
-			<Link to='/projects'>Projetos</Link>
-			<Link to='/about'>Sobre</Link>
+			<Link to='/projects' className='LinksHeader'>Projetos</Link>
+			<Link to='/about' className='LinksHeader'>Sobre</Link>
 			<Switch
 				data-testid='toggle-theme'
 				onChange={toggleTheme}
@@ -20,8 +20,8 @@ export default function NavBar() {
 				height={10}
 				width={40}
 				handleDiameter={20}
-				offColor={dark.color.emphasis}
-				onColor={light.color.emphasis}
+				onColor={dark.color.highlights}
+				offColor={light.color.highlights}
 			/>
 		</nav>
 	);

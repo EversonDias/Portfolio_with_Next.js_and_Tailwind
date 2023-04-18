@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Container from './cardProject';
+import Container from './styles';
 
 export default function CardProject({name}) {
 	return (

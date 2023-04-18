@@ -6,8 +6,13 @@ import NavBar from '../../components/NavBar';
 export default function Header() {
 	return (
 		<Container>
-			<Logo/>
-			<NavBar/>
+			<div className='logo'>
+				<Logo type={type}/>
+			</div>
+			<NavBar
+				type={type}
+				toggleTheme={toggleTheme}
+			/>
 		</Container>
 	);
 }
