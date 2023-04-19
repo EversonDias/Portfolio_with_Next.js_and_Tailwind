@@ -18,15 +18,14 @@ margin-top: 50px;
 .containerText{
   display: flex;
   flex-direction: column;
-  width: 50%;
   justify-content: center;
   align-items: center;
 }
 
 .title {
-  margin: 10px;
+  margin-top: 10px;
   font-size: 60px;
-  text-shadow: -3px 4px 20px ${props => props.theme.color.header};
+  text-shadow: -3px 4px 20px ${props => props.theme.color.shadow};
   color: ${props => props.theme.color.highlights}
 }
 
@@ -34,7 +33,7 @@ margin-top: 50px;
   margin: 5px;
   font-size: 30px;
   color: ${props => props.theme.color.font};
-  text-shadow: -3px 4px 20px ${props => props.theme.color.header};
+  text-shadow: -3px 4px 20px ${props => props.theme.color.shadow};
 }
 `;
 

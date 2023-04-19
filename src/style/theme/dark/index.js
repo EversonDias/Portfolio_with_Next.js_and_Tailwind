@@ -5,5 +5,6 @@ export default {
 		highlights: '#B3BFB8',
 		font: '#ffffff',
 		select: '#3E3E3E',
+		shadow: '#00000050',
 	},
 };
