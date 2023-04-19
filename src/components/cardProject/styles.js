@@ -5,14 +5,14 @@ const Container = styled.div`
   height: 200px;
   border-radius: 6px;
   background-color: ${props => props.theme.color.header};
-  box-shadow: 2px 2px 4px #00000050;
+  box-shadow: 2px 2px 4px ${props => props.theme.color.shadow};
   margin: 10px;
   text-align: center;
   :hover{
     transform: scale(1.04);
     transition: 500ms;
     background-color: ${props => props.theme.color.select};
-    box-shadow: 7px 7px 15px #00000050;
+    box-shadow: 7px 7px 15px ${props => props.theme.color.shadow};
   }
   .imgCard {
     width: 100%;
