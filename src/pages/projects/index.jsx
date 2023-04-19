@@ -67,11 +67,14 @@ export default function Projects() {
 				</div>
 				<div className='containerProjects'>
 					{projects.map(({name, language, id, fork}) => (
-						fork || isIgnore(id) ? '' : <CardProject
-							key={id}
-							name={name}
-							language={language}
-						/>
+						fork || isIgnore(id) ? '' : (
+							<CardProject
+								key={id}
+								id={id}
+								name={name}
+								language={language}
+							/>
+						)
 					))}
 				</div>
 			</Container>
