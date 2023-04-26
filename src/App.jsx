@@ -1,7 +1,4 @@
-import React, {
-	useState,
-	useMemo,
-} from 'react';
+import React, {useState} from 'react';
 import {ThemeProvider} from 'styled-components';
 import Container from './style/app';
 import Global from './style/global';
@@ -22,11 +19,6 @@ export default function App() {
 		saveThemeLocalStorage(!theme);
 	};
 
-	const type = Boolean(theme);
-	const value = useMemo(() => ({
-		toggleTheme,
-		type,
-	}), [toggleTheme, type]);
 	return (
 		<ThemeProvider theme={theme ? dark : light}>
 			<Global />

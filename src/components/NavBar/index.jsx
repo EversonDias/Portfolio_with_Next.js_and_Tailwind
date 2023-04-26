@@ -1,12 +1,11 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import Switch from 'react-switch';
-import ThemeContext from '../../context/theme/Context';
 import dark from '../../style/theme/dark';
 import light from '../../style/theme/light';
+import PropTypes from 'prop-types';
 
-export default function NavBar() {
-	const {type, toggleTheme} = useContext(ThemeContext);
+export default function NavBar({type, toggleTheme}) {
 	return (
 		<nav className='navBar'>
 			<Link to='/projects' className='LinksHeader'>Projetos</Link>
@@ -26,3 +25,8 @@ export default function NavBar() {
 		</nav>
 	);
 }
+
+NavBar.propTypes = {
+	toggleTheme: PropTypes.func.isRequired,
+	type: PropTypes.bool.isRequired,
+};
