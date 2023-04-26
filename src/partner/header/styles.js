@@ -33,6 +33,12 @@ nav {
   transition: 500ms;
   background-color: ${props => props.theme.color.background};
 }
+@media screen and (max-width: 640px) {
+  /* justify-content: space-around; */
+  .navBar {
+    display: none;
+  }
+}
 `;
 
 export default Container;

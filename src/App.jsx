@@ -9,7 +9,7 @@ import Header from './partner/header';
 import MyRoutes from './routes';
 import dark from './style/theme/dark';
 import light from './style/theme/light';
-import ThemeContext from './context/theme/Context';
+import ListMenu from './components/listMenuHamburger';
 
 export default function App() {
 	const [theme, setTheme] = useState(localStorage.getItem('dark') === 'true' || false);
@@ -28,14 +28,19 @@ export default function App() {
 		type,
 	}), [toggleTheme, type]);
 	return (
-		<ThemeContext.Provider value={ value }>
-			<ThemeProvider theme={type ? dark : light}>
-				<Global />
-				<Container data-testid='main-home'>
-					<Header/>
-					<MyRoutes />
-				</Container>
-			</ThemeProvider>
-		</ThemeContext.Provider>
+		<ThemeProvider theme={theme ? dark : light}>
+			<Global />
+			<Container>
+				<Header
+					type={Boolean(theme)}
+					toggleTheme={toggleTheme}
+				/>
+				<MyRoutes />
+				<ListMenu
+					type={Boolean(theme)}
+					toggleTheme={toggleTheme}
+				/>
+			</Container>
+		</ThemeProvider>
 	);
 }

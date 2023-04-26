@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Container = styled.button`
   width: 200px;
   height: 200px;
+  border: none;
   border-radius: 6px;
   background-color: ${props => props.theme.color.header};
   box-shadow: 2px 2px 4px ${props => props.theme.color.shadow};
@@ -16,7 +17,7 @@ const Container = styled.div`
   }
   .imgCard {
     width: 100%;
-    height: 170px;
+    height: 178px;
     border-radius: 6px 6px 0 0;
     overflow: hidden;
   }

@@ -8,7 +8,7 @@ import light from '../../style/theme/light';
 export default function NavBar() {
 	const {type, toggleTheme} = useContext(ThemeContext);
 	return (
-		<nav>
+		<nav className='navBar'>
 			<Link to='/projects' className='LinksHeader'>Projetos</Link>
 			<Link to='/about' className='LinksHeader'>Sobre</Link>
 			<Switch
