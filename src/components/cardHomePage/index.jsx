@@ -4,7 +4,6 @@ import Container from './styles';
 function CardHomePage() {
 	return (
 		<Container>
-
 			<img
 				className='imgHome'
 				src='https://github.com/EversonDias.png'
