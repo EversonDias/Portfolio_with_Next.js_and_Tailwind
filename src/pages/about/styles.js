@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
+display: flex;
+flex-direction: column;
 text-align: center;
 .imgHome{
   margin: auto;
@@ -46,11 +48,27 @@ text-align: center;
   }
   .containerIcons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   .containerIcons > i {
     font-size: 50px;
     color: ${props => props.theme.color.highlights};
+  }
+  @media screen and (max-width:660px) {
+    .containerIcons {
+      display: grid;
+      grid-template-areas: 
+      "i i i i";
+    }
+    .containerIcons i {
+      margin: 10px;
+    }
+    .containerTecnologia {
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 `;
 

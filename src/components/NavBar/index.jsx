@@ -7,7 +7,7 @@ import light from '../../style/theme/light';
 
 export default function NavBar({toggleTheme, type}) {
 	return (
-		<nav>
+		<nav className='navBar'>
 			<Link to='/projects' className='LinksHeader'>Projetos</Link>
 			<Link to='/about' className='LinksHeader'>Sobre</Link>
 			<Switch
