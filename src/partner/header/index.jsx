@@ -27,8 +27,3 @@ export default function Header({toggleTheme, type}) {
 		</Container>
 	);
 }
-
-Header.propTypes = {
-	toggleTheme: PropTypes.func.isRequired,
-	type: PropTypes.bool.isRequired,
-};

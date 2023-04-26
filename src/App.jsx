@@ -1,4 +1,7 @@
-import React, {useState} from 'react';
+import React, {
+	useState,
+	useMemo,
+} from 'react';
 import {ThemeProvider} from 'styled-components';
 import Container from './style/app';
 import Global from './style/global';
@@ -9,21 +12,21 @@ import light from './style/theme/light';
 import ListMenu from './components/listMenuHamburger';
 
 export default function App() {
-	const [theme, setTheme] = useState(localStorage.getItem('theme') === 'true' || false);
+	const [theme, setTheme] = useState(localStorage.getItem('dark') === 'true' || false);
 	const saveThemeLocalStorage = theme => {
-		localStorage.setItem('theme', JSON.stringify(theme));
+		localStorage.setItem('dark', JSON.stringify(theme));
 	};
 
 	const toggleTheme = () => {
-		if (theme) {
-			setTheme(!theme);
-			saveThemeLocalStorage(!theme);
-		} else {
-			setTheme(!theme);
-			saveThemeLocalStorage(!theme);
-		}
+		setTheme(!theme);
+		saveThemeLocalStorage(!theme);
 	};
 
+	const type = Boolean(theme);
+	const value = useMemo(() => ({
+		toggleTheme,
+		type,
+	}), [toggleTheme, type]);
 	return (
 		<ThemeProvider theme={theme ? dark : light}>
 			<Global />
