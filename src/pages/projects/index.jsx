@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import CardProject from '../../components/cardProject';
 import Container from './styles';
+import icons from '../../utils/icons.json';
+import {BsFillGrid3X3GapFill} from 'react-icons/bs';
 
 export default function Projects() {
 	const [projects, setProjects] = useState([]);
@@ -43,25 +45,40 @@ export default function Projects() {
 		setProjects(newListOfProjects);
 	};
 
+	const handleSearch = ({target: {value}}) => {
+		const newListOfProjects = oldProjects.filter(({name}) => name.toLowerCase().includes(value.toLowerCase()));
+		setProjects(newListOfProjects);
+	};
+
 	return (
 		<div>
 			<Container>
 				<div className='containerFilters'>
-					<h2>Filtros</h2>
+					<input
+						className='search__input'
+						type='text'
+						placeholder='Search'
+						onChange={ handleSearch } />
 					{listOfFilters.length > 0 && (
 						<ul className='listFilters'>
 							{listOfFilters.map(filter => (
-								<li key={filter}>
+								<li key={filter} className='containerButton' onClick={ handleFilter }>
 									<button
 										className='buttonFilter'
-										onClick={ handleFilter }
-									>{filter}</button>
+									>
+										<i className={icons[filter.toLowerCase()]}></i>
+										<p>{filter}</p>
+									</button>
 								</li>
 							))}
-							<li><button
-								className='buttonFilter'
-								onClick={ () => setProjects(oldProjects) }
-							>Todos</button></li>
+							<li className='containerButton'>
+								<button
+									className='buttonFilter'
+									onClick={ () => setProjects(oldProjects) }
+								>
+									<BsFillGrid3X3GapFill/>
+									<p>Todos</p>
+								</button></li>
 						</ul>
 					)}
 				</div>

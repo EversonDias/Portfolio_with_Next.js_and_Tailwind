@@ -17,7 +17,7 @@ text-align: center;
   margin-top: 20px;
   background-color: ${props => props.theme.color.header};
   padding: 10px;
-  width: 90%;
+  width: 60%;
   border-radius: 6px;
   box-shadow: 11px 16px 20px 2px ${props => props.theme.color.shadow};
 }
@@ -25,24 +25,27 @@ text-align: center;
     color: ${props => props.theme.color.highlights};
     text-shadow: 11px 16px 20px 2px ${props => props.theme.color.shadow};
     padding: 5px;
+    font-size: 40px;
   }
   .pAbout {
     text-align: justify;
-    text-indent: 10px;
+    text-indent: 15px;
+    font-size: 20px;
     color: ${props => props.theme.color.font};
-    padding: 2px;
+    padding: 4px;
   }
   .containerTecnologia {
     margin: auto;
     margin-top: 50px;
     background-color: ${props => props.theme.color.header};
     padding: 10px;
-    width: 90%;
+    width: 60%;
     border-radius: 6px;
     box-shadow: 11px 16px 20px 2px ${props => props.theme.color.shadow};
   }
   .titleTecnologia {
     padding: 10px;
+    font-size: 40px;
     text-align: center;
     color: ${props => props.theme.color.highlights};
   }
@@ -62,12 +65,26 @@ text-align: center;
     }
     .containerIcons i {
       margin: 10px;
+      font-size: 2.5rem;
     }
     .containerTecnologia {
       margin-bottom: 50px;
       display: flex;
+      width: 80vw;
       flex-direction: column;
       align-items: center;
+    }
+    .titleTecnologia {
+      font-size: 1.5rem;
+    }
+    .containerAbout{
+      width: 80vw;
+    }
+    .titleAbout {
+      font-size: 1.5rem;
+    }
+    .pAbout {
+      font-size: 1.2rem;
     }
   }
 `;
