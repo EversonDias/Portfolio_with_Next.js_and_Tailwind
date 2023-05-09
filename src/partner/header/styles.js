@@ -26,18 +26,22 @@ nav {
   text-shadow: -3px 4px 20px ${props => props.theme.color.header};
 }
 .LinksHeader:hover {
-  transition: 500ms;
+  transition: 250ms;
   background-color: ${props => props.theme.color.background};
 }
-.logo:hover{
-  transition: 500ms;
+
+@media screen and (min-width: 640px) {
+  .logo:hover{
+  transition: 250ms;
   background-color: ${props => props.theme.color.background};
+}
 }
 @media screen and (max-width: 640px) {
   /* justify-content: space-around; */
   .navBar {
     display: none;
   }
+  
 }
 `;
 

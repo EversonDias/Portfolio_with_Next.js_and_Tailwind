@@ -5,9 +5,9 @@ import icons from '../../utils/icons.json';
 import {BsFillGrid3X3GapFill} from 'react-icons/bs';
 
 export default function Projects() {
+	const [listOfFilters, setListOfFilters] = useState([]);
 	const [projects, setProjects] = useState([]);
 	const [oldProjects, setOldProjects] = useState([]);
-	const [listOfFilters, setListOfFilters] = useState([]);
 	const getProjects = async () => {
 		const responseAPI = await fetch('https://api.github.com/users/EversonDias/repos');
 		const responseJSON = await responseAPI.json();
@@ -45,20 +45,10 @@ export default function Projects() {
 		setProjects(newListOfProjects);
 	};
 
-	const handleSearch = ({target: {value}}) => {
-		const newListOfProjects = oldProjects.filter(({name}) => name.toLowerCase().includes(value.toLowerCase()));
-		setProjects(newListOfProjects);
-	};
-
 	return (
 		<div>
 			<Container>
 				<div className='containerFilters'>
-					<input
-						className='search__input'
-						type='text'
-						placeholder='Search'
-						onChange={ handleSearch } />
 					{listOfFilters.length > 0 && (
 						<ul className='listFilters'>
 							{listOfFilters.map(filter => (

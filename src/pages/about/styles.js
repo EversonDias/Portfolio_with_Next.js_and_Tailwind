@@ -4,6 +4,7 @@ const Container = styled.div`
 display: flex;
 flex-direction: column;
 text-align: center;
+min-height: 90vh;
 .imgHome{
   margin: auto;
   margin-top: 20px;
@@ -51,6 +52,7 @@ text-align: center;
   }
   .containerIcons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
   }
   .containerIcons > i {

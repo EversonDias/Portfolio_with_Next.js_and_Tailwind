@@ -7,6 +7,7 @@ import MyRoutes from './routes';
 import dark from './style/theme/dark';
 import light from './style/theme/light';
 import ListMenu from './components/listMenuHamburger';
+import Footer from './partner/footer';
 
 export default function App() {
 	const [theme, setTheme] = useState(localStorage.getItem('dark') === 'true' || false);
@@ -32,6 +33,7 @@ export default function App() {
 					type={Boolean(theme)}
 					toggleTheme={toggleTheme}
 				/>
+				<Footer/>
 			</Container>
 		</ThemeProvider>
 	);
