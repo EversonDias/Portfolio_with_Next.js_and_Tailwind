@@ -33,10 +33,9 @@ min-height: 90vh;
   transition: 250ms;
 }
 .containerProjects {
-  display: flex;
-  width: 80%;
-  justify-content: start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-areas: 
+    "i i i i";
 }
   .buttonFilter p {
     font-size: 0.7rem;
@@ -59,6 +58,9 @@ min-height: 90vh;
   }
   @media screen and (max-width:660px) {
     .containerProjects {
+      display: flex;
+      width: 80%;
+      flex-wrap: wrap;
       justify-content: center;
     }
   }

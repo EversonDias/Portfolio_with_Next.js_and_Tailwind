@@ -24,18 +24,19 @@ export default function ProjectDetails() {
 		setProject(...newProject);
 	}, project);
 
-	console.log();
 	return (
 		<Component>
 			{
 				project && (
 					<ul>
 						<li className='containerImg'>
-							<img
-								id={project.id}
-								className='imgCard'
-								src={`https://raw.githubusercontent.com/EversonDias/${project.name}/main/readme/cardProject/main.png`}
-								alt={project.name} />
+							<a target='_blank' href={project.homepage ? project.homepage : `https://github.com/EversonDias/${project.name}/tree/main#readme` } rel='noreferrer'>
+								<img
+									id={project.id}
+									className='imgCard'
+									src={`https://raw.githubusercontent.com/EversonDias/${project.name}/main/readme/cardProject/main.png`}
+									alt={project.name} />
+							</a>
 						</li>
 						<li className='container'>
 							<p className='title'>Nome</p>

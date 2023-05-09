@@ -37,7 +37,7 @@ li {
 }
 @media screen and (max-width:660px) {
   .containerImg img {
-  width: 50%;
+  width: 300px;
   }
   .container {
     width: 80%;

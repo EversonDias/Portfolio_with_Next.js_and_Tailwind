@@ -7,18 +7,16 @@ text-align: center;
 min-height: 90vh;
 .imgHome{
   margin: auto;
-  margin-top: 20px;
-  width: 200px;
+  width: 300px;
   border-radius: 50%;
   padding: 7px;
   border: solid 7px ${props => props.theme.color.highlights};
 }
 .containerAbout{
   margin: auto;
-  margin-top: 20px;
   background-color: ${props => props.theme.color.header};
   padding: 10px;
-  width: 60%;
+  width: 50%;
   border-radius: 6px;
   box-shadow: 11px 16px 20px 2px ${props => props.theme.color.shadow};
 }
@@ -29,7 +27,7 @@ min-height: 90vh;
     font-size: 40px;
   }
   .pAbout {
-    text-align: justify;
+    text-align: start;
     text-indent: 15px;
     font-size: 20px;
     color: ${props => props.theme.color.font};
@@ -37,10 +35,9 @@ min-height: 90vh;
   }
   .containerTecnologia {
     margin: auto;
-    margin-top: 50px;
     background-color: ${props => props.theme.color.header};
     padding: 10px;
-    width: 60%;
+    width: 50%;
     border-radius: 6px;
     box-shadow: 11px 16px 20px 2px ${props => props.theme.color.shadow};
   }
@@ -70,6 +67,7 @@ min-height: 90vh;
       font-size: 2.5rem;
     }
     .containerTecnologia {
+      margin-top: 20px;
       margin-bottom: 50px;
       display: flex;
       width: 80vw;
@@ -81,12 +79,16 @@ min-height: 90vh;
     }
     .containerAbout{
       width: 80vw;
+      margin-top: 20px;
     }
     .titleAbout {
       font-size: 1.5rem;
     }
     .pAbout {
       font-size: 1.2rem;
+    }
+    .imgHome{
+      margin-top: 20px;
     }
   }
 `;
