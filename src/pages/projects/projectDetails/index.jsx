@@ -31,11 +31,13 @@ export default function ProjectDetails() {
 					<ul>
 						<li className='containerImg'>
 							<a target='_blank' href={project.homepage ? project.homepage : `https://github.com/EversonDias/${project.name}/tree/main#readme` } rel='noreferrer'>
-								<img
-									id={project.id}
-									className='imgCard'
-									src={`https://raw.githubusercontent.com/EversonDias/${project.name}/main/readme/cardProject/main.png`}
-									alt={project.name} />
+								<object id={project.id} className='imgCard' data={`https://raw.githubusercontent.com/EversonDias/${project.name}/main/readme/cardProject/main.png`} type='image/png'>
+									<img
+										id={project.id}
+										className='imgCard'
+										src='/picture/cardProject/underConstruction.png'
+										alt={project.name} />
+								</object>
 							</a>
 						</li>
 						<li className='container'>
