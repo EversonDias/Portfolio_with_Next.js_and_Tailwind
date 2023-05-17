@@ -9,18 +9,19 @@ justify-content: center;
 align-items: center;
 background-color: ${props => props.theme.color.background};
 box-shadow: 7px 7px 15px ${props => props.theme.color.shadow};
-transition: 500ms;
+transition: 250ms;
 }
 .listMenuOff{
-position: absolute;
-height: 93vh;
-width: 0;
-right: 0;
-top: 50px;
+  position: fixed;
+  height: 93vh;
+  width: 0;
+  right: 0;
+  top: 50px;
 }
 .listMenuOn{
-position: absolute;
-height: 93vh;
+position: fixed;
+z-index: 1;
+height: 100vh;
 width: 80%;
 right: 0;
 top: 50px;

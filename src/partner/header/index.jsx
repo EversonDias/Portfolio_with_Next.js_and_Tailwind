@@ -10,20 +10,22 @@ import MyContext from '../../context/MyContext';
 export default function Header({toggleTheme, type}) {
 	const {handleOnClickMenu, menu} = useContext(MyContext);
 	return (
-		<Container>
-			<label onClick={menu ? handleOnClickMenu : null} className='logo'>
-				<Link to='/' data-testid='logo-test'>
-					<Logo type={type}/>
-				</Link>
-			</label>
-			<NavBar
-				type={type}
-				toggleTheme={toggleTheme}
-			/>
-			<Menu
-				type={type}
-				toggleTheme={toggleTheme}
-			/>
+		<Container >
+			<div className={menu ? 'menuOn header' : 'header'}>
+				<label onClick={menu ? handleOnClickMenu : null} className='logo'>
+					<Link to='/' data-testid='logo-test'>
+						<Logo type={type}/>
+					</Link>
+				</label>
+				<NavBar
+					type={type}
+					toggleTheme={toggleTheme}
+				/>
+				<Menu
+					type={type}
+					toggleTheme={toggleTheme}
+				/>
+			</div>
 		</Container>
 	);
 }

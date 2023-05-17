@@ -3,10 +3,10 @@ import styled from 'styled-components';
 const Container = styled.header`
 background: ${props => props.theme.color.header};
 height: 50px;
+width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 25px;
 font-family: 'Ultra', serif;
 nav {
   display: flex;
@@ -29,7 +29,20 @@ nav {
   transition: 250ms;
   background-color: ${props => props.theme.color.background};
 }
-
+.header{
+  background: ${props => props.theme.color.header};
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  font-family: 'Ultra', serif;
+}
+.menuOn {
+  position: fixed;
+  z-index: 2;
+}
 @media screen and (min-width: 640px) {
   .logo:hover{
   transition: 250ms;
