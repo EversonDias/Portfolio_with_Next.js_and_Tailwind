@@ -11,7 +11,7 @@ li {
 .containerImg {
   margin-top: 20px;
 }
-.containerImg img {
+.containerImg .imgCard{
   width: 500px;
 }
 .container {
@@ -36,7 +36,7 @@ li {
   justify-content: space-evenly;
 }
 @media screen and (max-width:660px) {
-  .containerImg img {
+  .containerImg .imgCard {
   width: 300px;
   }
   .container {
