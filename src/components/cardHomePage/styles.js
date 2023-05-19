@@ -34,6 +34,7 @@ margin-top: 50px;
   font-size: 30px;
   color: ${props => props.theme.color.font};
   text-shadow: -3px 4px 20px ${props => props.theme.color.shadow};
+  text-align: center;
 }
 `;
 

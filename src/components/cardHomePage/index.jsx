@@ -12,6 +12,7 @@ function CardHomePage() {
 			<div className='containerText'>
 				<h1 className='title' >Everson Dias</h1>
 				<p className='describe'>Desenvolvedor: Full Stack</p>
+				<p className='describe'>Seja bem-vindo ao meu portifólio website</p>
 			</div>
 		</Container>
 	);
