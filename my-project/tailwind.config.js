@@ -12,6 +12,7 @@ export default {
           "background": '#3E3E3E',
           "highlights": '#B3BFB8',
           "font": '#ffffff',
+          "font-2": "#000000",
           "select": '#3E3E3E',
           "shadow": '#00000050',
         },
@@ -20,6 +21,7 @@ export default {
           "background": '#748CAB',
           "highlights": '#B3BFB8',
           "font": '#ffffff',
+          "font-2": "#000000",
           "select": '#748CAB',
           "shadow": '#00000070',
         }

@@ -1,16 +1,12 @@
 import { useState } from "react";
 import ToggleMenu from "../../partner/ToggleMenu";
-
-export interface eventTarget {
-  target: {
-    checked: boolean;
-  }
-}
+import { eventTarget } from "../../types";
 
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
-
-  function handleToggle({ target: { checked } }: eventTarget): void {
+  const navBar = ['Inicio', 'Projeto', 'Sobre', 'Contato']
+  function handleToggle(event: eventTarget): void {
+    const { target: { checked } } = event;
     if (checked !== undefined) {
       setToggleMenu(checked)
     }
@@ -18,22 +14,21 @@ export default function Header() {
 
   return (
     <header className="bg-light-header h-[10vh] flex justify-between items-center
-    ">
-      <p>logo</p>
+    px-4">
+      <img src="images/logos/logo_DiasDev.svg" alt="logo dias dev" />
       <div className="md:hidden">
         <ToggleMenu handleToggle={handleToggle} />
-        {
-          toggleMenu && (
-            <div className="bg-gray-400[90] absolute top-[10vh] w-full h-[90vh] flex justify-end duration-700" >
-              <div className="bg-light-header w-[70%] flex flex-col justify-center items-center" >
-                <p className="m-5">Home</p>
-                <p className="m-5">Projects</p>
-                <p className="m-5">About</p>
-                <p className="m-5">Contact</p>
-              </div>
-            </div>
-          )
-        }
+        <div className={`bg-light-shadow absolute top-[10vh] left-0 w-full h-[90vh] flex justify-end ${!toggleMenu && 'closeMenu'}`} >
+          <div className={`bg-light-header w-[70%] flex flex-col items-center justify-center gap-6 ${toggleMenu ? 'moveOpen' : 'moveClose'}`}>
+            {
+              navBar.map((value) => (
+                <a key={value} className="hover:scale-90 text-light-font-2 hover:bg-light-highlights btn btn-wide bg-light-background" href="/">
+                  <p className="">{value}</p>
+                </a>
+              ))
+            }
+          </div>
+        </div>
       </div>
     </header>
   )
