@@ -2,47 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+/* move open menu hamburg */
 .moveOpen {
   transform: translate(0vh);
   animation: moveOpen 500ms;
 }
-
-.moveClose {
-  position: absolute;
-  height: 90vh;
-  transform: translate(100vh);
-  animation: moveClose 1s;
-}
-
-.closeMenu {
-  background-color: transparent;
-  transform: translate(100vh);
-  animation: closeMenu 1s;
-}
-
-@keyframes closeMenu {
-  from {
-    transform: translate(0vh);
-  }
-}
-
 @keyframes moveOpen {
   from {
     transform: translate(100vh);
   }
 }
 
+/* move close menu hamburg */
+.moveClose {
+  position: absolute;
+  height: 90vh;
+  transform: translate(100vh);
+  animation: moveClose 1s;
+}
 @keyframes moveClose {
   from {
     transform: translate(0vh);
   }
 }
 
+/* close background menu hamburg */
+.closeMenu {
+  background-color: transparent;
+  transform: translate(100vh);
+  animation: closeMenu 1s;
+}
+@keyframes closeMenu {
+  from {
+    transform: translate(0vh);
+  }
+}
+
+/* hove underline */
 .hoverUnderline {
   display: inline-block;
   position: relative;
 }
-
 .hoverUnderline::after {
   content: '';
   position: absolute;
@@ -55,7 +55,6 @@
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-
 .hoverUnderline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
