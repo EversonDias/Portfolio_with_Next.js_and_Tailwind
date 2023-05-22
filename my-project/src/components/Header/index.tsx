@@ -9,10 +9,23 @@ export default function Header() {
     <header
       className="bg-light-header h-[10vh] flex justify-between items-center px-4"
     >
-      <img 
+      <img
         src="images/logos/logo_DiasDev.svg" 
         alt="logo dias dev" 
       />
+      <nav className="hidden md:flex justify-start gap-12">
+      {
+        navBar.map((value) => (
+          <a
+            key={value}
+            className="hoverUnderline text-xl text-light-highlights font-bold" 
+            href="/"
+          >
+            <p>{value}</p>
+          </a>
+        ))
+      }
+      </nav>
       <div 
         className="md:hidden"
       >

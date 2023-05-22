@@ -7,7 +7,7 @@ type HeaderContextProps = {
 }
 
 export const HeaderProvider = ({children}: HeaderContextProps) => {
-  const navBar = ['Inicio', 'Projeto', 'Sobre', 'Contato'];
+  const navBar = ['INICIO', 'PROJETO', 'SOBRE', 'CONTATO'];
   const [toggleMenu, setToggleMenu] = useState(false);
 
   function handleToggle(event: eventTarget): void {
