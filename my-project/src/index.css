@@ -7,6 +7,7 @@
   transform: translate(0vh);
   animation: moveOpen 500ms;
 }
+
 @keyframes moveOpen {
   from {
     transform: translate(100vh);
@@ -20,6 +21,7 @@
   transform: translate(100vh);
   animation: moveClose 1s;
 }
+
 @keyframes moveClose {
   from {
     transform: translate(0vh);
@@ -32,6 +34,7 @@
   transform: translate(100vh);
   animation: closeMenu 1s;
 }
+
 @keyframes closeMenu {
   from {
     transform: translate(0vh);
@@ -43,6 +46,7 @@
   display: inline-block;
   position: relative;
 }
+
 .hoverUnderline::after {
   content: '';
   position: absolute;
@@ -55,7 +59,29 @@
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
+
 .hoverUnderline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+/* background carousel */
+.imageCarousel0 {
+  background-image: url('images/itemsCarousel/image0.webp');
+}
+
+.imageCarousel1 {
+  background-image: url('images/itemsCarousel/image1.webp');
+}
+
+.imageCarousel2 {
+  background-image: url('images/itemsCarousel/image2.webp');
+}
+
+.imageCarousel3 {
+  background-image: url('images/itemsCarousel/image3.webp');
+}
+
+.imageCarousel4 {
+  background-image: url('images/itemsCarousel/image4.webp');
 }
