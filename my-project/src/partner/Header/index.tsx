@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ToggleMenu from "../../partner/ToggleMenu";
+import ToggleMenu from "../../components/ToggleMenu";
 import { HeaderContext } from "../../contexts/HeaderContext/context";
 
 export default function Header() {
