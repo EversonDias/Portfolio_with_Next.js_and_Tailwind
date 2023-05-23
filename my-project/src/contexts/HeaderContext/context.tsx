@@ -4,7 +4,7 @@ import { eventTarget } from "../../types";
 type value = {
   toggleMenu: boolean;
   navBar: string[];
-  handleToggle: (event: eventTarget) => void;
+  HandleToggle: (event: eventTarget) => void;
 }
 
 const valueDefault = {

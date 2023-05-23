@@ -31,7 +31,7 @@ export default function Header() {
       >
         <ToggleMenu />
         <div 
-          className={`bg-light-shadow absolute top-[10vh] left-0 w-full h-[90vh] flex justify-end ${!toggleMenu && 'closeMenu'}`} 
+          className={`bg-light-shadow absolute top-[10vh] left-0 w-full h-[90vh] flex justify-end ${!toggleMenu && 'closeMenu'} z-10`} 
         >
           <div
             className={`bg-light-header w-[70%] flex flex-col items-center justify-center gap-6 ${toggleMenu ? 'moveOpen' : 'moveClose'}`}
