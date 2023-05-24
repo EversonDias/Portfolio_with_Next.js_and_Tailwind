@@ -8,13 +8,11 @@ type HeaderContextProps = {
 
 export const HeaderProvider = ({ children }: HeaderContextProps) => {
   const navBar = ['INICIO', 'PROJETO', 'SOBRE', 'CONTATO'];
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(undefined);
 
   function HandleToggle(event: eventTarget): void {
     const { target: { checked } } = event;
-    console.log(checked);
-    
-    if (checked !== undefined) {
+     if (checked !== undefined) {
       setToggleMenu(checked)
     }
   }

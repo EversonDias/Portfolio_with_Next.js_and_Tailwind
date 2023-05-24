@@ -6,7 +6,7 @@ export default function ToggleMenu() {
 
   return (
     <label
-      className="btn btn-circle swap swap-rotate bg-light-background hover:bg-light-highlights text-light-header"
+      className="btn btn-circle swap swap-rotate bg-highlights hover:bg-secondary hover:text-highlights text-primary border-none z-20"
       onClick={(event) => { HandleToggle(event) }}
     >
       <input

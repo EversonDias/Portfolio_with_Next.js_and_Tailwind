@@ -1,9 +1,11 @@
-import Carousel from "../../components/Carousel";
+import CardHomePage from "../../components/CardHomePage";
+import Technology from '../../components/Technology';
 
 export function Home() {
   return (
-    <div>
-      <Carousel />
+    <div className="flex flex-col items-center">
+      <CardHomePage/>
+      <Technology />
     </div>
   )
 }

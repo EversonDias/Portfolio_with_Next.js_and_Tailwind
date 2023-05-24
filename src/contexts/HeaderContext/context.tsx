@@ -2,13 +2,13 @@ import { createContext } from "react";
 import { eventTarget } from "../../types";
 
 type value = {
-  toggleMenu: boolean;
+  toggleMenu?: boolean;
   navBar: string[];
   HandleToggle: (event: eventTarget) => void;
 }
 
 const valueDefault = {
-  toggleMenu: false,
+  toggleMenu: undefined,
   navBar: [''],
   HandleToggle: () => {},
 }
