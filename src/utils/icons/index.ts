@@ -11,7 +11,10 @@ const icons = {
   "mysql": "devicon-mysql-plain-wordmark",
   "npm": "devicon-npm-original-wordmark",
   "scss": "devicon-sass-original",
-  "python": "devicon-python-plain"
+  "python": "devicon-python-plain",
+  "typescript": "devicon-typescript-plain",
+  "tailwind": "devicon-tailwindcss-original-wordmark",
+  "jest": "devicon-jest-plain",
 }
 
 export default icons;

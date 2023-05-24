@@ -11,7 +11,6 @@ export default function Header() {
     >
       <div className={` h-[10vh] flex justify-between items-center px-4 fixed top-0 w-full ${toggleMenu ? 'bg-primary' : 'backdrop-blur-sm'} z-10`}>
         <img
-          className="z-20"
           src="images/logos/logo_DiasDev.svg"
           alt="logo dias dev"
         />
