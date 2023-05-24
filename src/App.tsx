@@ -7,7 +7,7 @@ import { ProjectProvider } from "./contexts/ProjectContext/provider";
 
 export default function App() {
   return (
-    <main className="bg-primary w-full">
+    <main className="bg-primary w-full overflow-hidden">
       <HeaderProvider>
         <ProjectProvider>
         <Header />

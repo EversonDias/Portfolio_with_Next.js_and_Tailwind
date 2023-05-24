@@ -13,7 +13,7 @@ function CardHomePage() {
 				<p></p>
 			</div>
 			<img
-				className='w-full absolute z-0 left-[80px]'
+				className='w-[500px] absolute z-0 left-[80px]'
 				src='images/home/perfil.png'
 				alt='foto de perfil'
 			/>
