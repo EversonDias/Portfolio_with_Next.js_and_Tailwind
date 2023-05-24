@@ -26,7 +26,7 @@ export default function CardProject({name,description,id,language, homepage, ind
 		</div>
 			{
 				activeModal === String(id) && (
-				<div className="backdrop-blur-sm fixed top-0 h-[100vh] w-full flex justify-center items-center z-20 text-font">
+				<div className="backdrop-blur-sm fixed top-0 h-[100vh] w-full flex items-center z-20 text-font">
 					<div className="flex flex-col items-end bg-secondary w-[90%] p-4 rounded-md">
 						<button id="" className="btn btn-circle mb-4 bg-highlights text-primary" onClick={handleModal}>
 												<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
