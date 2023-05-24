@@ -1,89 +1,29 @@
-// import { useEffect, useState } from 'react';
-// import CardProject from '../../components/cardProject';
-// import icons from '../../utils/icons';
-// import { BsFillGrid3X3GapFill } from 'react-icons/bs';
+import { useContext } from 'react';
+import CardProject from '../../components/CardProject';
+import { ProjectContext } from '../../contexts/ProjectContext/context';
 
 export default function Projects() {
-	// const [listOfFilters, setListOfFilters] = useState([]);
-	// const [projects, setProjects] = useState([]);
-	// const [oldProjects, setOldProjects] = useState([]);
-	// const getProjects = async () => {
-	// 	const responseAPI = await fetch('https://api.github.com/users/EversonDias/repos');
-	// 	const responseJSON = await responseAPI.json();
-	// 	setProjects([...responseJSON]);
-	// 	setOldProjects([...responseJSON]);
-	// };
+const {isIgnore, projects, handleListLimit, listLimit} = useContext(ProjectContext);
 
-	// useEffect(() => {
-	// 	getProjects();
-	// }, []);
-
-	// useEffect(() => {
-	// 	createFilter();
-	// }, [projects]);
-
-	// const isIgnore = id => {
-	// 	const projectIgnore = [516911726, 538154747, 595723869];
-	// 	return projectIgnore.includes(id);
-	// };
-
-	// const createFilter = () => {
-	// 	const listOfProjects = [];
-	// 	oldProjects.forEach(project => {
-	// 		const { language } = project;
-	// 		if (language !== null) {
-	// 			listOfProjects.push(language);
-	// 		}
-	// 	});
-	// 	const nonRepeatingFilterList = [...new Set(listOfProjects)];
-	// 	setListOfFilters(nonRepeatingFilterList);
-	// };
-
-	// const handleFilter = ({ target: { innerText } }) => {
-	// 	const newListOfProjects = oldProjects.filter(({ language }) => language === innerText);
-	// 	setProjects(newListOfProjects);
-	// };
-
+	
 	return (
-		<div>
-			{/* <div>
-				<div className='containerFilters'>
-					{listOfFilters.length > 0 && (
-						<ul className='listFilters'>
-							{listOfFilters.map(filter => (
-								<li key={filter} className='containerButton' onClick={handleFilter}>
-									<button
-										className='buttonFilter'
-									>
-										<i className={icons[filter.toLowerCase()]}></i>
-										<p>{filter}</p>
-									</button>
-								</li>
-							))}
-							<li className='containerButton'>
-								<button
-									className='buttonFilter'
-									onClick={() => setProjects(oldProjects)}
-								>
-									<BsFillGrid3X3GapFill />
-									<p>Todos</p>
-								</button></li>
-						</ul>
-					)}
-				</div>
-				<div className='containerProjects'>
-					{projects.map(({ name, language, id, fork }) => (
-						fork || isIgnore(id) ? '' : (
-							<CardProject
-								key={id}
-								id={id}
-								name={name}
-								language={language}
-							/>
-						)
-					))}
-				</div>
-			</div> */}
+		<div id="PROJETO" className='pt-14 '>
+			{projects.map(({ name, language, id, fork, description, homepage }, index: number) => (
+				fork || isIgnore(id) ? '' : (
+				<CardProject
+					key={id}
+					id={id}
+					name={name}
+					description={description}
+					language={language}
+					homepage={homepage}
+					index={index}
+				/>
+			)
+			))}
+			<div className='text-center p-4'>
+				<button className='border-t-0 border-4 w-full hover:bg-primary bg-transparent text-font border-secondary hover:border-highlights rounded-b-full hover:text-highlights font-bold duration-500' onClick={handleListLimit}>{listLimit === projects.length ? 'FECHA' : 'MAIS' }</button>
+			</div>
 		</div>
 	);
 }

@@ -1,13 +1,9 @@
-import { ReactNode, useState } from "react";
-import { eventTarget } from "../../types";
+import { useState } from "react";
+import { ContextProps, eventTarget } from "../../types";
 import { HeaderContext } from "./context";
 
-type HeaderContextProps = {
-  children: ReactNode;
-}
-
-export const HeaderProvider = ({ children }: HeaderContextProps) => {
-  const navBar = ['INICIO', 'PROJETO', 'SOBRE', 'CONTATO'];
+export const HeaderProvider = ({ children }: ContextProps) => {
+  const navBar = ['INICIO', 'TECHNOLOGY', 'PROJETO', 'SOBRE', 'CONTATO'];
   const [toggleMenu, setToggleMenu] = useState(undefined);
 
   function HandleToggle(event: eventTarget): void {

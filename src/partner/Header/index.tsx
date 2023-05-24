@@ -20,7 +20,7 @@ export default function Header() {
             <a
               key={value}
               className="hoverUnderline text-xl text-light-highlights font-bold"
-              href="/"
+              href={`#${value}`}
             >
               <p>{value}</p>
             </a>
