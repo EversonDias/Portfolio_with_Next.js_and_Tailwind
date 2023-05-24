@@ -7,7 +7,7 @@ export default function ToggleMenu() {
 
   return (
     <label
-      className="btn btn-circle swap swap-rotate bg-highlights hover:bg-secondary hover:text-highlights text-primary border-none z-20"
+      className="btn btn-circle swap swap-rotate bg-highlights hover:bg-secondary hover:text-highlights text-primary border-none z-20 duration-500"
       onClick={({target: {checked}}: eventTarget) => { HandleToggle(checked) }}
     >
       <input

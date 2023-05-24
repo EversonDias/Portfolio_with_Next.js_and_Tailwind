@@ -44,7 +44,7 @@ export default function Header() {
                   <a
                     key={value}
                     onClick={() => HandleToggle(false)}
-                    className="hover:scale-90 text-font hover:bg-highlights btn btn-wide bg-secondary"
+                    className="hover:scale-95 text-font hover:bg-highlights btn btn-wide bg-secondary duration-500"
                     href={`#${value}`}
                   >
                     <p>{value}</p>

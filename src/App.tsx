@@ -4,6 +4,7 @@ import Footer from "./partner/Footer";
 import { Home } from "./pages/Home";
 import Projects from "./pages/projects";
 import { ProjectProvider } from "./contexts/ProjectContext/provider";
+import About from "./pages/About";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Header />
         <Home/>
         <Projects />
+        <About/>
         <Footer/>
         </ProjectProvider>
       </HeaderProvider>
