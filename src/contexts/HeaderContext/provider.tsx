@@ -1,13 +1,12 @@
 import { useState } from "react";
-import { ContextProps, eventTarget } from "../../types";
+import { ContextProps } from "../../types";
 import { HeaderContext } from "./context";
 
 export const HeaderProvider = ({ children }: ContextProps) => {
   const navBar = ['INICIO', 'TECHNOLOGY', 'PROJETO', 'SOBRE', 'CONTATO'];
-  const [toggleMenu, setToggleMenu] = useState(undefined);
+  const [toggleMenu, setToggleMenu] = useState(Boolean);
 
-  function HandleToggle(event: eventTarget): void {
-    const { target: { checked } } = event;
+  function HandleToggle(checked?: boolean): void {
      if (checked !== undefined) {
       setToggleMenu(checked)
     }

@@ -3,7 +3,7 @@ import ToggleMenu from "../../components/ToggleMenu";
 import { HeaderContext } from "../../contexts/HeaderContext/context";
 
 export default function Header() {
-  const { navBar, toggleMenu } = useContext(HeaderContext);
+  const { navBar, toggleMenu, HandleToggle } = useContext(HeaderContext);
 
   return (
     <header
@@ -43,6 +43,7 @@ export default function Header() {
                 navBar.map((value) => (
                   <a
                     key={value}
+                    onClick={() => HandleToggle(false)}
                     className="hover:scale-90 text-font hover:bg-highlights btn btn-wide bg-secondary"
                     href={`#${value}`}
                   >

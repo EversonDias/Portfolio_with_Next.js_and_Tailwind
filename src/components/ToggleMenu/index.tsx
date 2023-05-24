@@ -1,16 +1,18 @@
 import { useContext } from "react";
 import { HeaderContext } from "../../contexts/HeaderContext/context";
+import { eventTarget } from "../../types";
 
 export default function ToggleMenu() {
-  const { HandleToggle } = useContext(HeaderContext);
+  const { HandleToggle, toggleMenu } = useContext(HeaderContext);
 
   return (
     <label
       className="btn btn-circle swap swap-rotate bg-highlights hover:bg-secondary hover:text-highlights text-primary border-none z-20"
-      onClick={(event) => { HandleToggle(event) }}
+      onClick={({target: {checked}}: eventTarget) => { HandleToggle(checked) }}
     >
       <input
         type="checkbox"
+        checked={toggleMenu}
       />
       <svg
         className="swap-off fill-current"
