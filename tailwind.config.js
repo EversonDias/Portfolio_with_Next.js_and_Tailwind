@@ -19,7 +19,10 @@ module.exports = {
           "select": '#748CAB',
           "shadow": '#00000070',
         }
-      }
+      },
+      screens: {
+        '2xl': '1650px',
+      },
     },
   },
   plugins: [require("daisyui")],

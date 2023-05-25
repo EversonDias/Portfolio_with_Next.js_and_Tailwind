@@ -38,6 +38,14 @@ export const ProjectProvider = ({ children }: ContextProps) => {
       setListLimit(projects.length);
     }
   }
+
+  useEffect(() => {
+    const width = window.screen.width;
+    if(width >= 786) {
+      setListLimit(projects.length)
+    }
+    
+  }, [projects])
   
   return (
     <ProjectContext.Provider value={{projects, isIgnore, handleModal,activeModal, handleListLimit, listLimit}}>
