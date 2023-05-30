@@ -13,10 +13,10 @@ type value = {
 const valueDefault = {
   projects: [],
   isIgnore: () => true || false,
-  handleModal: () => {},
+  handleModal: () => { },
   activeModal: '',
-  handleListLimit: () => {},
-  listLimit: 5,
+  handleListLimit: () => { },
+  listLimit: 3,
 }
 
 export const ProjectContext = createContext<value>(valueDefault);

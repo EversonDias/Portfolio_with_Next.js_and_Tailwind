@@ -7,7 +7,7 @@ export const HeaderProvider = ({ children }: ContextProps) => {
   const [toggleMenu, setToggleMenu] = useState(Boolean);
 
   function HandleToggle(checked?: boolean): void {
-     if (checked !== undefined) {
+    if (checked !== undefined) {
       setToggleMenu(checked)
     }
   }
