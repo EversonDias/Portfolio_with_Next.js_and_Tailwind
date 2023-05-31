@@ -13,19 +13,21 @@ export default function Header() {
         <img
           src="images/logos/logo_DiasDev.svg"
           alt="logo dias dev"
+          width="200"
+          height="100"
         />
         <nav className="hidden md:flex justify-start gap-12">
-        {
-          navBar.map((value) => (
-            <a
-              key={value}
-              className="hoverUnderline text-xl text-light-highlights font-bold"
-              href={`#${value}`}
-            >
-              <p>{value}</p>
-            </a>
-          ))
-        }
+          {
+            navBar.map((value) => (
+              <a
+                key={value}
+                className="hoverUnderline text-xl text-light-highlights font-bold"
+                href={`#${value}`}
+              >
+                <p>{value}</p>
+              </a>
+            ))
+          }
         </nav>
         <div
           className="md:hidden z-10"
@@ -34,25 +36,25 @@ export default function Header() {
           {
             toggleMenu !== undefined && (
               <div
-            className={`backdrop-blur-sm absolute top-[10vh] left-0 w-full h-[100vh] flex justify-end ${!toggleMenu && 'closeMenu'}`}
-          >
-            <div
-              className={`bg-primary w-[70%] flex flex-col items-center justify-center gap-6 ${toggleMenu ? 'moveOpen' : 'moveClose'}`}
-            >
-              {
-                navBar.map((value) => (
-                  <a
-                    key={value}
-                    onClick={() => HandleToggle(false)}
-                    className="hover:scale-95 text-font hover:bg-highlights btn btn-wide bg-secondary duration-500"
-                    href={`#${value}`}
-                  >
-                    <p>{value}</p>
-                  </a>
-                ))
-              }
-            </div>
-          </div>
+                className={`backdrop-blur-sm absolute top-[10vh] left-0 w-full h-[100vh] flex justify-end ${!toggleMenu && 'closeMenu'}`}
+              >
+                <div
+                  className={`bg-primary w-[70%] flex flex-col items-center justify-center gap-6 ${toggleMenu ? 'moveOpen' : 'moveClose'}`}
+                >
+                  {
+                    navBar.map((value) => (
+                      <a
+                        key={value}
+                        onClick={() => HandleToggle(false)}
+                        className="hover:scale-95 text-font hover:bg-highlights btn btn-wide bg-secondary duration-500"
+                        href={`#${value}`}
+                      >
+                        <p>{value}</p>
+                      </a>
+                    ))
+                  }
+                </div>
+              </div>
             )
           }
         </div>

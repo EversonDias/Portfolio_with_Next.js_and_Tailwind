@@ -9,9 +9,9 @@ export default function CardProject({ name, description, id, language, homepage,
 
 	return (
 		<div className={`w-[22rem] m-auto mt-10 [&>div>button]:hover:bg-primary hover:bg-highlights [&>div>button]:hover:text-highlights bg-secondary overflow-hidden rounded-lg border-none [&>object]:hover:scale-110 duration-500 ${index > listLimit && "hidden"} h-[25rem] `}>
-			<object id={String(id)} className='w-[100%] h-[280px] duration-500 object-cover object-top' data={`https://raw.githubusercontent.com/EversonDias/${name}/main/readme/cardProject/main.png`} type='image/png'>
+			<object id={`capaDeProject${String(id)}`} className='w-[100%] h-[280px] duration-500 object-cover object-top' data={`https://raw.githubusercontent.com/EversonDias/${name}/main/readme/cardProject/main.png`} type='image/png' aria-labelledby="imagem capa do projeto">
 				<img
-					id={String(id)}
+					id={`capaDefault${String(id)}`}
 					className='w-full duration-500'
 					src='/images/cardProject/underConstruction.png'
 					alt={name} />

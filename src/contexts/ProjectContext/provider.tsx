@@ -18,6 +18,7 @@ export const ProjectProvider = ({ children }: ContextProps) => {
 
   useEffect(() => {
     GetProjects();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function isIgnore(id: number): boolean {

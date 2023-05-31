@@ -5,8 +5,10 @@ export default function About() {
 				<p className='text-2xl p-4 hoverUnderline md:text-5xl md:font-bold md:p-5'>SOBRE</p>
 			</div>
 			<img
-				className='rounded-full w-[300px] border-4 border-secondary hover:border-highlights duration-500 hover:scale-110'
+				className='rounded-full border-4 border-secondary hover:border-highlights duration-500 hover:scale-110'
 				src='https://github.com/EversonDias.png'
+				width="300"
+				height="300"
 				alt='foto de perfil'
 			/>
 			<div className='w-[90%] flex flex-col gap-4 md:w-[90%] xl:w-[70%] mb-5'>
