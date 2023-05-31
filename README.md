@@ -27,7 +27,7 @@ Este projeto é um WebSite onde falo um pouco de mim e utilizo para catalogar e 
 
 Neste app utilizo a API do github para ter acesso ao meu repositório e informações deles como github page e linguagem utilizada.
 
-App responsivo com opção de trocar o tema.
+App responsivo.
 
 ![projeto-mobile](readme/description-mobile.gif)
 
