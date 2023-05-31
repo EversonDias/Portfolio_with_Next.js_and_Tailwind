@@ -9,7 +9,7 @@ export default function About() {
 				src='https://github.com/EversonDias.png'
 				alt='foto de perfil'
 			/>
-			<div className='w-[90%] flex flex-col gap-4 md:w-[90%] xl:w-[70%]'>
+			<div className='w-[90%] flex flex-col gap-4 md:w-[90%] xl:w-[70%] mb-5'>
 				<p className='text-xl text-font md:text-2xl'>Moro em São Paulo Capital, desde os meus 3 anos, em 2020 comecei a trabalhar de corretor Imobiliário, onde desenvolvi as habilidades de Negociação, gerenciamento de tempo, empreendedorismo, gestão de pessoas, resiliência e resolução de problemas.</p>
 				<p className='text-xl text-font md:text-2xl'>Atualmente estou estudando desenvolvimento web pela Trybe, onde estou desenvolvendo
 					várias habilidades de soft skills e hard skills como HTML 5, CSS, JavaScrip, React, Node.js, Jest.js e RTL.</p>
