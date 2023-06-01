@@ -23,7 +23,7 @@
 
 # Descrição do Projeto
 
-Este projeto é um WebSite onde falo um pouco de mim e utilizo para catalogar e organizar meus projetos.
+Este projeto é um WebSite onde falo um pouco sobre mim e utilizo para catalogar e organizar meus projetos.
 
 Neste app utilizo a API do github para ter acesso ao meu repositório e informações deles como github page e linguagem utilizada.
 
