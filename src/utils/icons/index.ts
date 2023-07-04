@@ -19,6 +19,12 @@ const icons: icon = {
   typescript: "devicon-typescript-plain",
   tailwind: "devicon-tailwindcss-original-wordmark",
   jest: "devicon-jest-plain",
+  shell: "devicon-bash-plain",
+  java: "devicon-java-plain",
+  C: "devicon-c-plain",
+  Cplusplus: "devicon-cplusplus-plain",
+  csharp: "devicon-csharp-plain",
+  nextjs: "devicon-nextjs-plain-wordmark"
 }
 
 export default icons;

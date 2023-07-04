@@ -3,7 +3,7 @@ import { ContextProps } from "../../types";
 import { HeaderContext } from "./context";
 
 export const HeaderProvider = ({ children }: ContextProps) => {
-  const navBar = ['INICIO', 'TECHNOLOGY', 'PROJETO', 'SOBRE'];
+  const navBar = ['INICIO', 'TECNOLOGIA', 'PROJETO', 'SOBRE'];
   const [toggleMenu, setToggleMenu] = useState(Boolean);
 
   function HandleToggle(checked?: boolean): void {
