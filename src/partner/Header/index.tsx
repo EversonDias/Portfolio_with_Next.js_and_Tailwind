@@ -36,6 +36,7 @@ export default function Header() {
           {
             toggleMenu !== undefined && (
               <div
+              onClick={() => HandleToggle(false)}
                 className={`backdrop-blur-sm absolute top-[10vh] left-0 w-full h-[100vh] flex justify-end ${!toggleMenu && 'closeMenu'}`}
               >
                 <div

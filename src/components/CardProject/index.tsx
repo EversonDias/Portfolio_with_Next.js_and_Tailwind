@@ -24,12 +24,12 @@ export default function CardProject({ name, description, id, language, homepage,
 			</div>
 			{
 				activeModal === String(id) && (
-					<div className="backdrop-blur-sm fixed top-0 h-[100vh] w-full flex items-center z-20 text-font right-0 justify-center md:p-10">
-						<div className="flex flex-col items-end bg-secondary w-[90%] p-4 rounded-md md:w-[50%]">
-							<button id="" className="btn btn-circle mb-4 bg-highlights text-primary hover:text-highlights duration-500" onClick={handleModal}>
+					<div onClick={handleModal} className="backdrop-blur-sm fixed top-0 h-[100vh] w-full flex items-center z-20 text-font right-0 justify-center md:p-10">
+						<div className="flex flex-col items-end bg-secondary w-[90%] h-[500px] overflow-scroll p-4 rounded-md md:w-[50%] z-30">
+							<button className="btn btn-circle mb-4 bg-highlights text-primary hover:text-highlights duration-500" onClick={handleModal}>
 								<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
 							</button>
-									<div className="w-full text-center m-4">
+									<div className="w-full text-center my-4">
 										<h1 className="text-2xl font-bold hoverUnderline mb-2 duration-500 md:text-4xl">Title</h1>
 										<p className="text-xl flex gap-4 items-center justify-center text-center hover:text-highlights duration-500" >{name}</p>
 							</div>
@@ -37,7 +37,7 @@ export default function CardProject({ name, description, id, language, homepage,
 							<ImageCard 
 								id={String(id)}
 								name={name}
-								className="w-[50%] m-auto"
+								className="w-[80%] md:w-[50%] m-auto"
 							/>
 							</div>
 							<div className="w-full">
