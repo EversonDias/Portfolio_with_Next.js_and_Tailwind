@@ -1,4 +1,5 @@
 import React, { ObjectHTMLAttributes } from 'react'
+import Image from 'next/image'
 
 interface props extends ObjectHTMLAttributes<HTMLObjectElement>{
   id: string;
@@ -15,11 +16,13 @@ export default function ImageCard({id, name, ...rest}: props) {
       aria-labelledby="imagem capa do projeto"
     {...rest}
     >
-				<img
+				<Image
 					id={`capaDefault${id}`}
 					className='duration-500 m-auto object-cover object-top'
 					src='/images/cardProject/underConstruction.png'
 					alt={name}
+          width={300}
+          height={280}
            />
 			</object>
   )

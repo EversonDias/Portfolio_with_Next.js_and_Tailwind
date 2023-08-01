@@ -1,11 +1,11 @@
 "use client"
-import Header from "./partner/Header";
+import Header from "./components/Header";
 import { HeaderProvider } from "./contexts/HeaderContext/provider";
-import Footer from "./partner/Footer";
-import { Home } from "./pages/Home";
-import Projects from "./pages/projects";
+import Footer from "./components/Footer";
+import { Home } from "./components/Home";
+import Projects from "./components/projects";
 import { ProjectProvider } from "./contexts/ProjectContext/provider";
-import About from "./pages/About";
+import About from "./components/About";
 import { Suspense, useEffect, useState } from "react";
 import Loading from "./Loading";
 
@@ -15,7 +15,7 @@ export default function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 1000)
+    }, 3000)
   }, [])
   
   return (

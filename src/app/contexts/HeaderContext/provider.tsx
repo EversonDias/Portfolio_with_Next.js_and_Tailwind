@@ -6,7 +6,7 @@ import { HeaderContext } from "./context";
 export const HeaderProvider = ({ children }: ContextProps) => {
   const navBar = ['INICIO', 'TECNOLOGIA', 'PROJETO', 'SOBRE'];
   const [toggleMenu, setToggleMenu] = useState(Boolean);
-
+  
   function HandleToggle(checked?: boolean): void {
     if (checked !== undefined) {
       setToggleMenu(checked)
