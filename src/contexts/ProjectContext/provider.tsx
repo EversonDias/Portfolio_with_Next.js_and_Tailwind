@@ -11,7 +11,6 @@ export const ProjectProvider = ({ children }: ContextProps) => {
   async function GetProjects(): Promise<void> {
     const responseAPI = await fetch('https://api.github.com/users/EversonDias/repos');
     const responseJSON: Promise<[]> = await responseAPI.json();
-    console.log(responseJSON);
     const filterProjects = [...await responseJSON].filter((project: project): boolean => !(project.fork || isIgnore(project.id)))
     setProjects(filterProjects);
   };
@@ -33,13 +32,10 @@ export const ProjectProvider = ({ children }: ContextProps) => {
 
   function handleListLimit() {
     if (listLimit < projects.length - 5) {
-      console.log('limite < projects', listLimit + 5);
       setListLimit(listLimit + 5);
     } else if (listLimit === projects.length) {
-      console.log('limit = project', 3);
       setListLimit(3);
     } else {
-      console.log('limite default', 11);
       setListLimit(projects.length);
     }
   }

@@ -5,8 +5,14 @@ import { Home } from "./pages/Home";
 import Projects from "./pages/projects";
 import { ProjectProvider } from "./contexts/ProjectContext/provider";
 import About from "./pages/About";
+import { useEffect } from "react";
 
 export default function App() {
+  useEffect(() => {
+    const OK = process.env.URL_FIRST
+    console.log(OK)
+  }, [])
+  
   return (
     <main className="bg-primary w-full overflow-hidden">
       <HeaderProvider>

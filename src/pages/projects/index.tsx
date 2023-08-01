@@ -5,8 +5,6 @@ import { ProjectContext } from '../../contexts/ProjectContext/context';
 export default function Projects() {
 	const { projects, handleListLimit, listLimit } = useContext(ProjectContext);
 
-	console.log(projects);
-
 	return (
 		<div id="PROJETO">
 			<div className='text-center pt-14 md:p-20'>
