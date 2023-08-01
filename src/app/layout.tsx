@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'My Portfolio',
   description: 'Web site feito para demonstrar meus projetos pessoais',
+  icons: "icon.png",
 }
 
 export default function RootLayout({
