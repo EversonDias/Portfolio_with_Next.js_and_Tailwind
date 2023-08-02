@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ContextProps, eventTarget } from "../../types";
 import { ProjectContext } from './context';
 import { project } from "../../types";
+import { apiGitHub } from "../../utils/env";
 
 export const ProjectProvider = ({ children }: ContextProps) => {
   const [projects, setProjects] = useState([]);
@@ -10,7 +11,7 @@ export const ProjectProvider = ({ children }: ContextProps) => {
   const [listLimit, setListLimit] = useState(3);
 
   async function GetProjects(): Promise<void> {
-    const responseAPI = await fetch('https://api.github.com/users/EversonDias/repos');
+    const responseAPI = await fetch(apiGitHub);
     const responseJSON: Promise<[]> = await responseAPI.json();
     const filterProjects = [...await responseJSON].filter((project: project): boolean => !(project.fork || isIgnore(project.id)))
     setProjects(filterProjects);

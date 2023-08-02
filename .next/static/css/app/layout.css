@@ -1890,27 +1890,8 @@ html {
 
 @media (min-width: 1650px) {
 
-  .\32xl\:flex {
-    display: flex;
-  }
-
-  .\32xl\:hidden {
-    display: none;
-  }
-
   .\32xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1920px) {
-
-  .\33xl\:flex {
-    display: flex;
-  }
-
-  .\33xl\:hidden {
-    display: none;
   }
 }
 

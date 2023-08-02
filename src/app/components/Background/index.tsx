@@ -1,3 +1,5 @@
+import { wallpaper } from "../../utils/env";
+
 export default function Background() {
 
   return (
@@ -12,7 +14,7 @@ export default function Background() {
         muted
         controls={false}
       >
-        <source src="https://raw.githubusercontent.com/EversonDias/myPortfolio/main/public/word.webm"/>
+        <source src={wallpaper}/>
       </video>
   </div>
   )

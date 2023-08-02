@@ -4,6 +4,7 @@ import { ProjectContext } from "../../contexts/ProjectContext/context";
 import icons from '../../utils/icons';
 import { FiExternalLink } from 'react-icons/fi';
 import ImageCard from "../ImageCard";
+import { gitHube, gitHubeLastUrl } from "../../utils/env";
 
 export default function CardProject({ name, description, id, language, homepage, index }: cardItem,) {
 	const { handleModal, activeModal, listLimit } = useContext(ProjectContext);
@@ -52,7 +53,7 @@ export default function CardProject({ name, description, id, language, homepage,
 								<p className="text-xl w-full md:text-2xl">{description}</p>
 							</div>
 							<div className="flex w-full justify-evenly mt-4">
-								<a className='flex gap-2 hover:text-highlights text-xl duration-500 md:text-2xl' target='_blank' href={`https://github.com/EversonDias/${name}/tree/main#readme`} rel='noreferrer'>Repositório <FiExternalLink /></a>
+								<a className='flex gap-2 hover:text-highlights text-xl duration-500 md:text-2xl' target='_blank' href={gitHube + name + gitHubeLastUrl} rel='noreferrer'>Repositório <FiExternalLink /></a>
 								{
 									homepage && (
 										<a className='flex gap-2 hover:text-highlights text-xl duration-500 md:text-2xl' href={homepage} target='_blank' rel='noreferrer'>Site demo <FiExternalLink /></a>

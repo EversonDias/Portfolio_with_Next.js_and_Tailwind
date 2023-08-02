@@ -10,7 +10,7 @@ import { Suspense, useEffect, useState } from "react";
 import Loading from "./Loading";
 
 export default function App() {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     setTimeout(() => {
