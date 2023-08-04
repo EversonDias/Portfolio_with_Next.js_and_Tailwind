@@ -68,7 +68,7 @@ npm install
 4° inicie o projeto
 
 ```bash
-npm start
+npm run dev
 ```
 
 ou acesse através do link
