@@ -50,7 +50,7 @@ você precisa ter Instalado o npm e o nodejs.
 1° Clone o Projeto
 
 ```bash
-git clone git@github.com:EversonDias/myPortfolio.git 
+git clone https://github.com/EversonDias/Portfolio_with_Next.js_and_Tailwind.git myPortfolio
 ```
 
 2° Entre no projeto
