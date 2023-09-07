@@ -1,14 +1,15 @@
 "use client"
 import { useEffect, useState } from "react";
-import { ContextProps, eventTarget } from "../../types";
+import { ContextProps, cardItem, eventTarget } from "../../types";
 import { ProjectContext } from './context';
 import { project } from "../../types";
 import { apiGitHub } from "../../utils/env";
 
 export const ProjectProvider = ({ children }: ContextProps) => {
   const [projects, setProjects] = useState([]);
-  const [activeModal, setActiveModal] = useState('')
-  const [listLimit, setListLimit] = useState(3);
+  const [activeModal, setActiveModal] = useState<{ cardItem: Omit<cardItem, "index"> | null; }>({
+    cardItem: null,
+  })
 
   async function GetProjects(): Promise<void> {
     const responseAPI = await fetch(apiGitHub);
@@ -27,23 +28,14 @@ export const ProjectProvider = ({ children }: ContextProps) => {
     return projectIgnore.includes(id);
   };
 
-  function handleModal(event: eventTarget) {
-    const { target: { id } } = event;
-    setActiveModal(id);
-  }
-
-  function handleListLimit() {
-    if (listLimit < projects.length - 5) {
-      setListLimit(listLimit + 5);
-    } else if (listLimit === projects.length) {
-      setListLimit(3);
-    } else {
-      setListLimit(projects.length);
-    }
+  function handleModal(cardItem: cardItem | null) {
+    setActiveModal({
+      cardItem: cardItem,
+    });
   }
 
   return (
-    <ProjectContext.Provider value={{ projects, isIgnore, handleModal, activeModal, handleListLimit, listLimit }}>
+    <ProjectContext.Provider value={{ projects, isIgnore, handleModal, activeModal }}>
       {children}
     </ProjectContext.Provider>
   )

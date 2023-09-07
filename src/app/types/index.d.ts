@@ -10,6 +10,7 @@ export type cardItem = {
   description: string;
   language: string;
   homepage: string;
+  topics: String[];
   index: number;
 }
 
@@ -24,4 +25,5 @@ export type project = {
   fork: boolean,
   description: string, 
   homepage: string;
+  topics: String[];
 }

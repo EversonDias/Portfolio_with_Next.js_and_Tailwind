@@ -1,22 +1,18 @@
 import { createContext } from "react";
-import { eventTarget, project } from "../../types";
+import { eventTarget, project, cardItem } from "../../types";
 
 type value = {
   projects: project[];
   isIgnore: (id: number) => boolean;
-  handleModal: (event: eventTarget) => void;
-  activeModal: string;
-  handleListLimit: () => void;
-  listLimit: number;
+  handleModal: (cardItem: cardItem | null) => void;
+  activeModal: { cardItem: Omit<cardItem, "index"> | null; };
 }
 
 const valueDefault = {
   projects: [],
   isIgnore: () => true || false,
-  handleModal: () => { },
-  activeModal: '',
-  handleListLimit: () => { },
-  listLimit: 3,
+  handleModal: (cardItem: cardItem | null) => { },
+  activeModal: {cardItem: null, }
 }
 
 export const ProjectContext = createContext<value>(valueDefault);
