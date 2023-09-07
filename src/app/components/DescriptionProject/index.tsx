@@ -31,7 +31,7 @@ export default function DescriptionProject() {
           <div className="flex justify-center">
             <p className="text-2xl font-bold hoverUnderline mb-2 duration-500 md:text-4xl">Tecnologias</p>
           </div>
-          <p className="text-xl grid grid-cols-3 md:grid-cols-4 gap-4  items-center justify-center text-center hover:text-highlights duration-500">
+          <p className={`text-xl ${topics.length > 4  ? "grid grid-cols-3 md:grid-cols-4" : "flex justify-center"} gap-4  items-center justify-center text-center hover:text-highlights duration-500`}>
             {
               topics.map((topic, index: number) => (
                 <div key={index}>
