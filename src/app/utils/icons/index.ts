@@ -25,7 +25,8 @@ const icons: icon = {
   eslint: "devicon-eslint-original",
   bootstrap: "devicon-bootstrap-plain",
   "styled-components": "devicon-devicon-plain",
-  sequelize: "devicon-sequelize-plain-wordmark"
+  sequelize: "devicon-sequelize-plain-wordmark",
+  angular: "devicon-angularjs-plain"
 }
 
 export default icons;
